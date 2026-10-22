@@ -1,0 +1,8 @@
+# Week 6 validation build: throwaway, never committed (see docs/reference/build-and-test-guide.md)
+validation/
+
+# Week 3 AI-built prototype: throwaway, never committed (see docs/reference/build-and-test-guide.md)
+prototype/
+
+# macOS Finder metadata
+.DS_Store

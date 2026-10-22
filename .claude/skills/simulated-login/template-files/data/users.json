@@ -1,0 +1,17 @@
+[
+  {
+    "id": "admin-1",
+    "name": "Ada Admin",
+    "role": "admin"
+  },
+  {
+    "id": "member-1",
+    "name": "Max Member",
+    "role": "member"
+  },
+  {
+    "id": "member-2",
+    "name": "Mia Member",
+    "role": "member"
+  }
+]

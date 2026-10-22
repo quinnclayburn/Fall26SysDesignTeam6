@@ -1,0 +1,82 @@
+[
+  {
+    "id": "coffee-corner",
+    "name": "Coffee Corner",
+    "description": "Cozy local cafe known for pour-over coffee and fresh pastries",
+    "category": "Cafe",
+    "image_url": "https://picsum.photos/seed/coffee-corner/800/600",
+    "location": "Main Street"
+  },
+  {
+    "id": "green-grocer",
+    "name": "Green Grocer",
+    "description": "Neighborhood produce market with seasonal fruits and vegetables",
+    "category": "Grocery",
+    "image_url": "https://picsum.photos/seed/green-grocer/800/600",
+    "location": "River District"
+  },
+  {
+    "id": "book-nook",
+    "name": "The Book Nook",
+    "description": "Independent bookstore with curated fiction and kids titles",
+    "category": "Bookstore",
+    "image_url": "https://picsum.photos/seed/book-nook/800/600",
+    "location": "Oak Avenue"
+  },
+  {
+    "id": "fit-studio",
+    "name": "Fit Studio",
+    "description": "Small-group fitness classes for beginners and busy professionals",
+    "category": "Fitness",
+    "image_url": "https://picsum.photos/seed/fit-studio/800/600",
+    "location": "North Plaza"
+  },
+  {
+    "id": "tech-stop",
+    "name": "Tech Stop",
+    "description": "Device accessories repair and setup help for phones and laptops",
+    "category": "Electronics",
+    "image_url": "https://picsum.photos/seed/tech-stop/800/600",
+    "location": "Central Mall"
+  },
+  {
+    "id": "artisan-bites",
+    "name": "Artisan Bites",
+    "description": "Handmade sandwiches salads and daily soup specials",
+    "category": "Restaurant",
+    "image_url": "https://picsum.photos/seed/artisan-bites/800/600",
+    "location": "Market Lane"
+  },
+  {
+    "id": "pet-haven",
+    "name": "Pet Haven",
+    "description": "Friendly pet supply shop with food toys and grooming essentials",
+    "category": "Pet Store",
+    "image_url": "https://picsum.photos/seed/pet-haven/800/600",
+    "location": "Sunset Boulevard"
+  },
+  {
+    "id": "craft-hub",
+    "name": "Craft Hub",
+    "description": "Creative supply store for painting journaling and classroom projects",
+    "category": "Crafts",
+    "image_url": "https://picsum.photos/seed/craft-hub/800/600",
+    "location": "West End"
+  },
+  {
+    "id": "city-cycles",
+    "name": "City Cycles",
+    "description": "Urban bike rentals tune-ups and safety gear for all ages",
+    "category": "Sports",
+    "image_url": "https://picsum.photos/seed/city-cycles/800/600",
+    "location": "Hillside"
+  },
+  {
+    "id": "home-glow",
+    "name": "Home Glow",
+    "description": "Simple decor and lighting picks for dorms apartments and homes",
+    "category": "Home",
+    "image_url": "https://picsum.photos/seed/home-glow/800/600",
+    "location": "Lakeside"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "layout": [
+    {
+      "row": 1,
+      "columns": [
+        { "span": 3, "widget": "kpi_active_users" },
+        { "span": 3, "widget": "kpi_total_revenue" },
+        { "span": 3, "widget": "kpi_conversion_rate" },
+        { "span": 3, "widget": "kpi_error_rate" }
+      ]
+    },
+    {
+      "row": 2,
+      "columns": [
+        { "span": 8, "widget": "revenue_trend" },
+        { "span": 4, "widget": "status_badges" }
+      ]
+    },
+    {
+      "row": 3,
+      "columns": [
+        { "span": 6, "widget": "category_sales" },
+        { "span": 6, "widget": "engagement_scatter" }
+      ]
+    },
+    {
+      "row": 4,
+      "columns": [
+        { "span": 12, "widget": "response_time_histogram" }
+      ]
+    }
+  ]
+}

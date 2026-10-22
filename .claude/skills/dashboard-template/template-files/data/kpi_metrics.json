@@ -1,0 +1,30 @@
+[
+  {
+    "id": "active_users",
+    "label": "Active Users",
+    "value": 8452,
+    "unit": "",
+    "trend": 4.8
+  },
+  {
+    "id": "total_revenue",
+    "label": "Total Revenue",
+    "value": 24560,
+    "unit": "$",
+    "trend": 6.2
+  },
+  {
+    "id": "conversion_rate",
+    "label": "Conversion Rate",
+    "value": 3.8,
+    "unit": "%",
+    "trend": -0.4
+  },
+  {
+    "id": "error_rate",
+    "label": "Error Rate",
+    "value": 0.62,
+    "unit": "%",
+    "trend": -12.5
+  }
+]

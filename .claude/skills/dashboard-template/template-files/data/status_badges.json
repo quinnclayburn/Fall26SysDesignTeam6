@@ -1,0 +1,26 @@
+[
+  {
+    "label": "API Gateway",
+    "status": "ok"
+  },
+  {
+    "label": "Auth Service",
+    "status": "ok"
+  },
+  {
+    "label": "Payment Processor",
+    "status": "warning"
+  },
+  {
+    "label": "Search Index",
+    "status": "ok"
+  },
+  {
+    "label": "Background Jobs",
+    "status": "error"
+  },
+  {
+    "label": "CDN Edge",
+    "status": "ok"
+  }
+]

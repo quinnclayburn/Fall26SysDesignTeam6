@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Electronics",
+    "value": 4200
+  },
+  {
+    "category": "Apparel",
+    "value": 3100
+  },
+  {
+    "category": "Home & Garden",
+    "value": 2650
+  },
+  {
+    "category": "Sports",
+    "value": 1980
+  },
+  {
+    "category": "Books",
+    "value": 1420
+  },
+  {
+    "category": "Toys",
+    "value": 1750
+  }
+]

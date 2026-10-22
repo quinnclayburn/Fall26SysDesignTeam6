@@ -1,0 +1,102 @@
+[
+  {
+    "sessions": 20,
+    "conversion": 1.1
+  },
+  {
+    "sessions": 35,
+    "conversion": 1.6
+  },
+  {
+    "sessions": 50,
+    "conversion": 2.0
+  },
+  {
+    "sessions": 65,
+    "conversion": 2.3
+  },
+  {
+    "sessions": 80,
+    "conversion": 2.8
+  },
+  {
+    "sessions": 95,
+    "conversion": 2.6
+  },
+  {
+    "sessions": 110,
+    "conversion": 3.4
+  },
+  {
+    "sessions": 125,
+    "conversion": 3.6
+  },
+  {
+    "sessions": 140,
+    "conversion": 4.0
+  },
+  {
+    "sessions": 155,
+    "conversion": 4.6
+  },
+  {
+    "sessions": 170,
+    "conversion": 4.5
+  },
+  {
+    "sessions": 185,
+    "conversion": 4.8
+  },
+  {
+    "sessions": 200,
+    "conversion": 5.0
+  },
+  {
+    "sessions": 215,
+    "conversion": 5.3
+  },
+  {
+    "sessions": 230,
+    "conversion": 5.5
+  },
+  {
+    "sessions": 245,
+    "conversion": 5.1
+  },
+  {
+    "sessions": 260,
+    "conversion": 6.0
+  },
+  {
+    "sessions": 275,
+    "conversion": 6.3
+  },
+  {
+    "sessions": 290,
+    "conversion": 6.6
+  },
+  {
+    "sessions": 305,
+    "conversion": 6.8
+  },
+  {
+    "sessions": 320,
+    "conversion": 7.2
+  },
+  {
+    "sessions": 335,
+    "conversion": 7.3
+  },
+  {
+    "sessions": 350,
+    "conversion": 7.6
+  },
+  {
+    "sessions": 365,
+    "conversion": 7.8
+  },
+  {
+    "sessions": 380,
+    "conversion": 7.6
+  }
+]

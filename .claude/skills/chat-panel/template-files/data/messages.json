@@ -1,0 +1,9 @@
+[
+  {
+    "id": "welcome",
+    "role": "assistant",
+    "text": "Hi! I'm a placeholder chat assistant. Send a message and I'll echo it back. My replies are simulated until a real chat backend is connected.",
+    "attachment_name": "",
+    "timestamp": null
+  }
+]
