@@ -30,7 +30,7 @@ This is the one file the instructor checks each week. Each entry should be brief
 
 - **Change request:** None.
 
-- **Instructor response:** Pending.
+- **Instructor response:** jLyst: Approved, 10/23/2026.
 
 ---
 
