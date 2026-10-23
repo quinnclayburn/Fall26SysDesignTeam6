@@ -1,10 +1,13 @@
-# [Product/Service Name] — Specification
+# FieldWorks — Specification
 
-> **When:** Week 1 (Section 0), Week 2 (the rest), refined in Week 3 · **Owner:** Product Owner · **Done when:** every item in the SVC Self-Check at the end is true.
+> **When:** Week 1 (Section 0), Week 2 (the rest), refined in Week 3 · **Owner:** William Byers, Product Owner · **Done when:** every item in the SVC Self-Check at the end is true.
 >
-> **Version:** 1.0
+> **Version:** 1.0 — Initial Draft
 >
-> **Approved on:** ___ **by:** Product Owner ___ · Architecture Lead ___ · Delivery Lead ___
+> **Approved on:** Pending team review  
+> **Product Owner:** William Byers  
+> **Architecture Lead:** Mustafa  
+> **Delivery Lead:** Quinn
 >
 > **Filled-in Example:** `docs/examples/specification-example.md`
 
@@ -14,12 +17,13 @@ The Spec is the source of truth for *what* you're building. Write it so a teamma
 
 ## 0. Constitution
 
-*2–3 rules this product must never break, no matter what feature is added. If a rule wouldn't stop any feature, it isn't doing its job.*
+*These principles establish the non-negotiable boundaries for FieldWorks. Any proposed feature or design decision must comply with them.*
 
 | # | Principle | Why it exists |
 |---|-----------|---------------|
-| 1 | | |
-| 2 | | |
+| 1 | **Vehicle and equipment maintenance only.** Features must directly support asset identification, preventive maintenance inspections, deficiency reporting, or operational readiness. | Prevents scope expansion into unrelated inventory, purchasing, financial, or general property management functions. |
+| 2 | **Deficiencies must remain traceable.** Every reported deficiency must be associated with a specific asset and remain visible until explicitly resolved. | Prevents maintenance problems from disappearing when inspection records or asset statuses change. |
+| 3 | **Readiness must reflect unresolved problems.** An asset with an unresolved critical deficiency must not be displayed as fully operational or ready for service. | Prevents misleading readiness information and ensures critical maintenance issues remain visible. |
 
 ---
 
