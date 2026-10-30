@@ -81,4 +81,4 @@ Always pair status colors with written labels, using the wording and severity ru
 
 - [X] **Simple** — 3–7 colors, no more than 2 font families, one spacing scale.
 - [X] **Valuable** — every rule would change how a screen gets built; the brand principles actually rule things out.
-- [ ] **Complete** — every section is filled or marked "N/A because…"; every color meets its contrast target; components include hover, focus, disabled, and error states; the whole team has approved it.
+- [X] **Complete** — every section is filled or marked "N/A because…"; every color meets its contrast target; components include hover, focus, disabled, and error states; the whole team has approved it.
