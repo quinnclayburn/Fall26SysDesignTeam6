@@ -24,13 +24,8 @@ FieldWorks is a proposed web-based maintenance management system that will allow
 *An ADR (Architecture Decision Record) is one row per real choice between options. ADR-00 is always your tech stack — decide it first, early in Week 3, because the database goes into `data-api-design.md` Section 0. The course defaults are filled in; change one only for a real reason, and say why in "Why this one."*
 
 | ADR | Decision | Req IDs | Alternatives considered | Why this one |
-|-----|----------|---------|-------------------------|--------------|
-| ADR-00 | Tech stack — Frontend: Vue, no build (starter skill: collection-template) · Backend: Simulated · Database: ___ · Hosting: GitHub Pages (repo root) | | | |
-| ADR-01 | | | | |
-
-*Changed your mind later? Don't delete the old row — add a new ADR and write "Replaced by ADR-0X" in the old one.*
-
----
+|---|---|---|---|---|
+| ADR-00 | Tech stack — Frontend: Vue, no build (starter skill: collection-template); Backend: Simulated; Database: PostgreSQL (proposed real database), with browser localStorage for prototype persistence; Hosting: GitHub Pages (repo root). | R1–R18, R26–R28 | React instead of Vue; a real backend instead of a simulated backend; MySQL instead of PostgreSQL; server-hosted application instead of GitHub Pages. | Vue follows the course's default frontend approach, while a simulated backend and GitHub Pages avoid the need for server infrastructure during the prototype. PostgreSQL provides a relational design for assets, inspections, and deficiencies. localStorage allows browser-based simulation but does not provide secure shared storage or database transactions. |
 
 ## 3. Screens & Build Order
 
