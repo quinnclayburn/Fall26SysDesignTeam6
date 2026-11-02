@@ -14,7 +14,7 @@ The Spec says *what* to build. The Plan says *how*, in what order, and what migh
 
 ## 1. Approach
 
-*2–4 plain sentences. Someone non-technical should understand the shape of the solution.*
+FieldWorks is a proposed web-based maintenance management system that will allow users to register vehicles and equipment, complete preventive maintenance inspections, record deficiencies, and monitor equipment readiness. The system will be designed using Vue for the frontend, a simulated backend for the prototype, and GitHub Pages for hosting. The proposed design will use browser localStorage to simulate data persistence while defining a relational database structure for future implementation. The system will prioritize asset registration, inspection tracking, deficiency management, and accurate readiness reporting to ensure unresolved critical deficiencies are never displayed as ready for service.
 
 ---
 
