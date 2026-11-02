@@ -1,11 +1,12 @@
-# [Product/Service Name] — Plan
+# FieldWorks — Plan
 
 > **When:** Week 3 (Sections 1–2), Week 4 (Sections 3–4) · **Owner:** Architecture Lead (in a team of 4, the Plan owner) · **Done when:** every item in the SVC Self-Check at the end is true.
 >
 > **Version:** 1.0
->
-> **Approved on:** ___ **by:** Architecture Lead ___ · Product Owner ___ · Delivery Lead ___
->
+> **Approved on:** Pending team approval
+> **By:** Architecture Lead — Mustafa Almajmaie
+> Product Owner — William Byers
+> Delivery Lead — Quinn Clayburn
 > **Filled-in Example:** `docs/examples/plan-example.md`
 
 The Spec says *what* to build. The Plan says *how*, in what order, and what might go wrong.
