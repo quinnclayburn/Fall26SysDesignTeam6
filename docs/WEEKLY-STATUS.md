@@ -30,7 +30,7 @@ This is the one file the instructor checks each week. Each entry should be brief
 
 - **Change request:** Minor consistency and accessibility clarifications to align the specification and Style Guide; no functional scope change.
 
-- **Instructor response:** 
+- **Instructor response:** jLyst, Approved.
 
 
 ---
