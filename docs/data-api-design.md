@@ -1,11 +1,15 @@
-# [Product/Service Name] — Data & API Design
+# FieldWorks — Data & API Design
 
 > **When:** Week 3 (Sections 0–2), Week 4 (Sections 3–4) · **Owner:** Architecture Lead (in a team of 4, the Data & API owner) · **Done when:** every item in the SVC Self-Check at the end is true.
->
+
 > **Version:** 1.0
+> **Approved on:** Pending team approval
 >
-> **Approved on:** ___ **by:** Architecture Lead ___ · Product Owner ___ · Delivery Lead ___
+> **Architecture Lead:** Mustafa Almajmaie
 >
+> **Product Owner:** William Byers
+>
+> **Delivery Lead:** Quinn Clayburn
 > **Filled-in Example:** `docs/examples/data-api-design-example.md`
 
 This document turns the Spec's nouns into data and its user actions into endpoints. If the built app and this document disagree, this document wins until it's deliberately changed. Unresolved questions go in the Spec's Open Questions.
