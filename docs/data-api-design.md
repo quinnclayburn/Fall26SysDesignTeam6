@@ -37,14 +37,65 @@ This document turns the Spec's nouns into data and its user actions into endpoin
 
 **Key:** `PK` = identifies each row · `FK → Entity` = points to another entity's PK · `Unique` = no two rows can share this value. For every FK, say what happens when the parent is deleted: **block** it, or **delete** the children too — this is where data gets silently lost if nobody decides.
 
-**Entity: [Name]**
+
+**Entity: Asset**
 
 | Field | Type | Key | Required? | Req ID |
-|-------|------|-----|-----------|--------|
-| id | uuid | PK | Yes | |
-| | | | | |
+|---|---|---|---|---|
+| id | uuid | PK | Yes | R1 |
+| asset_id | text | Unique (trimmed, case-insensitive) | Yes | R1, R3 |
+| name | text | | Yes | R1 |
+| type | text (Vehicle or Equipment) | | Yes | R1, R2 |
+| model | text | | Yes | R1 |
 
-*(Repeat for each entity. 3–6 is typical.)*
+
+
+**Entity: ChecklistItem**
+
+| Field | Type | Key | Required? | Req ID |
+|---|---|---|---|---|
+| id | uuid | PK | Yes | R6 |
+| asset_type | text (Vehicle or Equipment) | | Yes | R6 |
+| item_code | text | Unique with asset_type | Yes | R6 |
+| description | text | | Yes | R6, R7 |
+
+
+**Entity: Inspection**
+
+| Field | Type | Key | Required? | Req ID |
+|---|---|---|---|---|
+| id | uuid | PK | Yes | R9 |
+| asset_id | uuid | FK → Asset (on delete: block) | Yes | R9, R11 |
+| inspection_date | timestamp | | Yes | R9 |
+| status | text (Draft or Submitted) | | Yes | R9, R11 |
+
+
+**Entity: InspectionResult**
+
+| Field | Type | Key | Required? | Req ID |
+|---|---|---|---|---|
+| id | uuid | PK | Yes | R7, R9 |
+| inspection_id | uuid | FK → Inspection (on delete: block) | Yes | R7, R9, R11 |
+| checklist_item_id | uuid | FK → ChecklistItem (on delete: block) | Yes | R6, R7 |
+| result | text (Pass, Fail, or N/A) | | Yes | R7 |
+
+
+**Entity: Deficiency**
+
+| Field | Type | Key | Required? | Req ID |
+|---|---|---|---|---|
+| id | uuid | PK | Yes | R8, R9 |
+| asset_id | uuid | FK → Asset (on delete: block) | Yes | R8, R12 |
+| inspection_id | uuid | FK → Inspection (on delete: block) | Yes | R8, R9 |
+| description | text | | Yes | R8 |
+| severity | text (Critical, Major, or Minor) | | Yes | R12, R13 |
+| status | text (Open or Resolved) | | Yes | R14, R15 |
+| resolution_notes | text | | No | R15 |
+| resolved_at | timestamp | | No | R15 |
+
+
+
+
 
 ---
 
