@@ -12,19 +12,18 @@ This document turns the Spec's nouns into data and its user actions into endpoin
 
 ---
 
+
 ## 0. Database & Storage
 
-**Database:** *(The real database this design is for, from ADR-00 in `plan.md`, e.g. "PostgreSQL via Supabase.")*
+**Database:** PostgreSQL (proposed relational database for future implementation, as documented in ADR-00 of `plan.md`).
 
-**Build option:** Simulated backend / Real backend *(Simulating? Keep designing for the real database — that's what System Implementation will build. The simulation uses the same entities, field names, and endpoints as this document.)*
+**Build option:** Simulated backend using browser localStorage. The proposed design uses the same entities and field names intended for the relational database.
 
-**We store:** *(One or two sentences. What must the app remember between visits?)*
+**We store:** Registered vehicle and equipment assets, preventive maintenance inspection records, checklist items and results, reported deficiencies, severity classifications, resolution notes, timestamps, and readiness-related information. The simulated prototype would retain records in the same browser between visits, provided localStorage is not cleared. Readiness status would be calculated from inspection and deficiency records rather than stored separately.
 
-**We do NOT store:** *(e.g. "Passwords — login is simulated, or handled by the login service.")*
+**We do NOT store:** Passwords, real user authentication credentials, personal identification information, GPS locations, payment information, or unrelated inventory records. Submitted inspection and deficiency history would not be deleted through the application.
 
-**Sensitive fields:** *(Personal or private data, and how it's protected. Write "None" if none.)*
-
-*This template assumes a relational database (tables, rows, keys). Using a document database such as MongoDB or Firestore? See the "Document databases" box in `docs/reference/data-api-design-guide.md`.*
+**Sensitive fields:** None planned. The design uses fictional demonstration data without personal information. Browser localStorage is not secure storage and would not be appropriate for confidential or real operational maintenance records.
 
 ---
 
