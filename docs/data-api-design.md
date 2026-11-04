@@ -131,14 +131,20 @@ erDiagram
         uuid checklist_item_id FK
     }
 
+
     DEFICIENCY {
         uuid id PK
         uuid asset_id FK
         uuid inspection_id FK
     }
+```
 
 ---
----
+
+## 3. Normalization Check
+
+
+
 ## 3. Normalization Check
 
 - [ ] **1NF** — every field holds one value (no lists or comma-separated values in a field).
