@@ -138,7 +138,7 @@ erDiagram
     }
 
 ---
-
+---
 ## 3. Normalization Check
 
 - [ ] **1NF** — every field holds one value (no lists or comma-separated values in a field).
