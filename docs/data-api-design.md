@@ -101,21 +101,41 @@ This document turns the Spec's nouns into data and its user actions into endpoin
 
 ## 2. Entity Relationship Diagram (ERD)
 
-*Draw every entity in [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) with its keys and relationships. List only PK, FK, and Unique fields — Section 1 holds the rest. Check that it renders at [mermaid.live](https://mermaid.live) before pasting it here.*
-
 ```mermaid
 erDiagram
-  PARENT ||--o{ CHILD : "has"
-  PARENT {
-    uuid id PK
-  }
-  CHILD {
-    uuid id PK
-    uuid parent_id FK
-  }
-```
+    ASSET ||--o{ INSPECTION : has
+    ASSET ||--o{ DEFICIENCY : has
+    INSPECTION ||--o{ INSPECTION_RESULT : contains
+    INSPECTION ||--o{ DEFICIENCY : reports
+    CHECKLIST_ITEM ||--o{ INSPECTION_RESULT : includes
 
-*`||--o{` means "one to zero-or-many". See the Mermaid link for other options.*
+    ASSET {
+        uuid id PK
+        text asset_id UK
+    }
+
+    CHECKLIST_ITEM {
+        uuid id PK
+        text asset_type
+        text item_code
+    }
+
+    INSPECTION {
+        uuid id PK
+        uuid asset_id FK
+    }
+
+    INSPECTION_RESULT {
+        uuid id PK
+        uuid inspection_id FK
+        uuid checklist_item_id FK
+    }
+
+    DEFICIENCY {
+        uuid id PK
+        uuid asset_id FK
+        uuid inspection_id FK
+    }
 
 ---
 
