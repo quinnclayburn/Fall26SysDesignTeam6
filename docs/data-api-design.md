@@ -143,10 +143,6 @@ erDiagram
 
 ## 3. Normalization Check
 
-
-
-## 3. Normalization Check
-
 - [ ] **1NF** — every field holds one value (no lists or comma-separated values in a field).
 - [ ] **2NF** — every field depends on the whole primary key.
 - [ ] **3NF** — no field depends on another non-key field (e.g. don't store `event_name` on a photo — store `event_id`).
