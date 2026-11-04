@@ -78,6 +78,7 @@ This document turns the Spec's nouns into data and its user actions into endpoin
 | inspection_id | uuid | FK → Inspection (on delete: block) | Yes | R7, R9, R11 |
 | checklist_item_id | uuid | FK → ChecklistItem (on delete: block) | Yes | R6, R7 |
 | result | text (Pass, Fail, or N/A) | | Yes | R7 |
+| na_reason | text | | Conditional (when N/A) | R7 |
 
 
 **Entity: Deficiency**
@@ -88,10 +89,11 @@ This document turns the Spec's nouns into data and its user actions into endpoin
 | asset_id | uuid | FK → Asset (on delete: block) | Yes | R8, R12 |
 | inspection_id | uuid | FK → Inspection (on delete: block) | Yes | R8, R9 |
 | description | text | | Yes | R8 |
-| severity | text (Critical, Major, or Minor) | | Yes | R12, R13 |
-| status | text (Open or Resolved) | | Yes | R14, R15 |
-| resolution_notes | text | | No | R15 |
-| resolved_at | timestamp | | No | R15 |
+| severity | text (Critical or Noncritical)| | Yes | R8, R12, R13 |
+| status | text (Open or Resolved) | | Yes | R9, R14, R15 |
+| resolution_notes | text | | No | R14, R15 |
+| resolved_at | timestamp | | No | R14 |
+| created_at | timestamp | | Yes | R9 |
 
 
 
