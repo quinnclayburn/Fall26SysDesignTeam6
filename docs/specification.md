@@ -49,7 +49,7 @@ The Business Case was not available for this draft. No claims about current user
 
 **Method:** AI-assisted scenario review of the editable PowerPoint storyboard; no participant sessions conducted. This is design analysis, separate from E1–E4. Acceptance tests remain NOT RUN.
 
-**Artifacts:** [Editable prototype](prototype/FieldWorks-Week3-Reviewed.pptx) · [PDF preview](prototype/FieldWorks-Week3-Reviewed.pdf). These relative links assume the files are uploaded to `docs/prototype/`.
+**Prototype:** [FieldWorks — Team Submission 3, Team 6](Team%20Submission%203%20Team%206.pptx).
 
 | ID | Perspective and design observation | Specification response |
 |---|---|---|
