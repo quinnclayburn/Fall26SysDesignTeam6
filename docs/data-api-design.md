@@ -91,8 +91,8 @@ This document turns the Spec's nouns into data and its user actions into endpoin
 | description | text | | Yes | R8 |
 | severity | text (Critical or Noncritical)| | Yes | R8, R12, R13 |
 | status | text (Open or Resolved) | | Yes | R9, R14, R15 |
-| resolution_notes | text | | No | R14, R15 |
-| resolved_at | timestamp | | No | R14 |
+| resolution_notes | text | | Conditional (when Resolved) | R14, R15 |
+| resolved_at | timestamp | | Conditional (when Resolved) | R14 |
 | created_at | timestamp | | Yes | R9 |
 
 
