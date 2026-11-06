@@ -31,7 +31,7 @@ This is the one file the instructor checks each week. Each entry should be brief
 
 - **Change request:** The specification was refined based on the design walkthrough; no broader functional scope change is recorded.
 
-- **Instructor response:** 
+- **Instructor response:** jLyst, Approved
 
 ---
 
