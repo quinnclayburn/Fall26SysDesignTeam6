@@ -4,7 +4,7 @@
 >
 > **Version:** 1.0
 >
-> **Approved on:** ___ **by:** Delivery Lead: Quinn Clayburn · Product Owner: William Byers · Architecture Lead: Mustafa Almajmaie
+> **Approved on:** 10/29/2026 **by:** Delivery Lead: Quinn Clayburn · Product Owner: William Byers · Architecture Lead: Mustafa Almajmaie
 >
 > **Filled-in Example:** `docs/examples/style-guide-example.md`
 
