@@ -80,20 +80,19 @@ This document turns the Spec's nouns into data and its user actions into endpoin
 | result | text (Pass, Fail, or N/A) | | Yes | R7 |
 | na_reason | text | | Conditional (when N/A) | R7 |
 
-
 **Entity: Deficiency**
 
-| Field | Type | Key | Required? | Req ID |
-|---|---|---|---|---|
+| **Field** | **Type** | **Key** | **Required?** | **Req ID** |
+| --- | --- | --- | --- | --- |
 | id | uuid | PK | Yes | R8, R9 |
-| asset_id | uuid | FK → Asset (on delete: block) | Yes | R8, R12 |
 | inspection_id | uuid | FK → Inspection (on delete: block) | Yes | R8, R9 |
 | description | text | | Yes | R8 |
-| severity | text (Critical or Noncritical)| | Yes | R8, R12, R13 |
+| severity | text (Critical or Noncritical) | | Yes | R8, R12, R13 |
 | status | text (Open or Resolved) | | Yes | R9, R14, R15 |
 | resolution_notes | text | | Conditional (when Resolved) | R14, R15 |
 | resolved_at | timestamp | | Conditional (when Resolved) | R14 |
 | created_at | timestamp | | Yes | R9 |
+
 
 
 
