@@ -105,7 +105,6 @@ This document turns the Spec's nouns into data and its user actions into endpoin
 ```mermaid
 erDiagram
     ASSET ||--o{ INSPECTION : has
-    ASSET ||--o{ DEFICIENCY : has
     INSPECTION ||--o{ INSPECTION_RESULT : contains
     INSPECTION ||--o{ DEFICIENCY : reports
     CHECKLIST_ITEM ||--o{ INSPECTION_RESULT : includes
@@ -135,7 +134,6 @@ erDiagram
 
     DEFICIENCY {
         uuid id PK
-        uuid asset_id FK
         uuid inspection_id FK
     }
 ```
@@ -146,7 +144,7 @@ erDiagram
 
 - [X] **1NF** — Every field contains a single value. All five FieldWorks entities (Asset, ChecklistItem, Inspection, InspectionResult, and Deficiency) are designed to satisfy 1NF. Inspection results and deficiencies are stored as separate records rather than lists within a single field.
 - [x] **2NF** — All five FieldWorks entities use a single-column primary key (id). Therefore, no non-key attribute can depend on only part of a composite primary key, and the design satisfies 2NF.
-- [ ] **3NF** — no field depends on another non-key field (e.g. don't store `event_name` on a photo — store `event_id`).
+- [x] **3NF** — All five FieldWorks entities are designed to satisfy Third Normal Form. Non-key attributes depend on their entity's key rather than on other non-key attributes. Asset information, checklist items, inspections, inspection results, and deficiencies are stored separately. The Deficiency entity references Inspection through inspection_id, allowing the associated asset to be identified without storing a redundant asset_id. This reduces duplication and prevents inconsistent asset references.
 
 **Intentional exceptions:** *(Any rule you broke on purpose, and why — or "None".)*
 
