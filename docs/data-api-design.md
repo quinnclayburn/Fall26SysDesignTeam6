@@ -146,7 +146,7 @@ erDiagram
 ## 3. Normalization Check
 
 - [X] **1NF** — Every field contains a single value. All five FieldWorks entities (Asset, ChecklistItem, Inspection, InspectionResult, and Deficiency) are designed to satisfy 1NF. Inspection results and deficiencies are stored as separate records rather than lists within a single field.
-- [ ] **2NF** — every field depends on the whole primary key.
+- [x] **2NF** — All five FieldWorks entities use a single-column primary key (id). Therefore, no non-key attribute can depend on only part of a composite primary key, and the design satisfies 2NF.
 - [ ] **3NF** — no field depends on another non-key field (e.g. don't store `event_name` on a photo — store `event_id`).
 
 **Intentional exceptions:** *(Any rule you broke on purpose, and why — or "None".)*
