@@ -146,24 +146,38 @@ erDiagram
 - [x] **2NF** — All five FieldWorks entities use a single-column primary key (id). Therefore, no non-key attribute can depend on only part of a composite primary key, and the design satisfies 2NF.
 - [x] **3NF** — All five FieldWorks entities are designed to satisfy Third Normal Form. Non-key attributes depend on their entity's key rather than on other non-key attributes. Asset information, checklist items, inspections, inspection results, and deficiencies are stored separately. The Deficiency entity references Inspection through inspection_id, allowing the associated asset to be identified without storing a redundant asset_id. This reduces duplication and prevents inconsistent asset references.
 
-**Intentional exceptions:** *(Any rule you broke on purpose, and why — or "None".)*
+**Intentional exceptions:** *None identified in the current normalized schema*
 
 ---
 
 ## 4. API Endpoints
 
-*One row per user action. The path names a thing (`/v1/photos`); the method says what to do with it (`GET` read, `POST` create, `PATCH` update, `DELETE` remove). If the app has login, list the login endpoints too (e.g. `POST /v1/login`, `GET /v1/me`, `POST /v1/logout`). If a response returns a field that isn't stored (such as a photo `url` built from a file path), say where it comes from.*
-
 | Req ID | Method | Path | Request | Success response | Errors | Who can call it |
-|--------|--------|------|---------|------------------|--------|-----------------|
-| | | | | | | Anyone / Member / Admin |
+|---|---|---|---|---|---|---|
+| R1–R5 | POST | `/assets` | `asset_id`, `name`, `type`, `model` | 201 Created; new Asset with generated UUID and Not assessed readiness | 400 invalid fields; 409 duplicate asset ID; 500 save failure | Anyone |
+| R4, R13, R17, R21–R23 | GET | `/assets` | Optional `search` and `readiness` filters | 200 OK; matching assets with calculated readiness | 400 invalid filter; 503 data unavailable | Anyone |
+| R1, R4, R12, R13, R16, R17 | GET | `/assets/{id}` | Asset UUID in path | 200 OK; asset details, Open deficiencies, and calculated readiness | 404 asset not found; 503 data unavailable | Anyone |
+| R6 | GET | `/assets/{id}/checklist` | Asset UUID in path | 200 OK; applicable checklist items for asset type | 404 asset or checklist not found | Anyone |
+| R7–R11, R13, R16, R18 | POST | `/assets/{id}/inspections` | Checklist results, N/A reasons, and descriptions/severities for failed items | 201 Created; submitted Inspection, linked Open deficiencies, and updated readiness; saved together | 400 incomplete or invalid answers; 404 asset not found; 500 save failure | Anyone |
+| R11, R12 | GET | `/inspections/{id}` | Inspection UUID in path | 200 OK; saved inspection, checklist results, and linked deficiencies | 404 inspection not found | Anyone |
+| R12, R13, R18 | GET | `/assets/{id}/deficiencies` | Asset UUID in path; optional `status` filter | 200 OK; deficiencies found through the asset's inspections | 400 invalid filter; 404 asset not found; 503 data unavailable | Anyone |
+| R14–R16 | PATCH | `/deficiencies/{id}` | `status: Resolved`, nonblank `resolution_notes` | 200 OK; updated deficiency, generated resolution timestamp, recalculated readiness, and remaining critical blockers | 400 invalid note; 404 deficiency not found; 409 already resolved; 500 save failure | Anyone |
+| R19, R20 | GET | `/assets/{id}/history` | Asset UUID in path | 200 OK; submitted inspections and resolved deficiency events, newest first | 404 asset not found; 503 history unavailable | Anyone |
 
-*Common status codes: `200` OK · `201` Created · `400` bad input · `401` not logged in · `403` not allowed · `404` not found · `409` conflict (e.g. duplicate).*
+**API design notes**
+
+- These endpoints are proposed contracts. The current prototype uses Vue and browser localStorage rather than a live HTTP server.
+- "Anyone" means a user of the single-user demonstration prototype. Real authentication and permissions are not implemented; final access rules require team approval under Q2.
+- Readiness is calculated from inspection and deficiency records rather than stored as a separate database field.
+- Deficiencies identify their associated asset through `Deficiency.inspection_id → Inspection.asset_id`.
+- Inspection submission must save the inspection, results, and deficiencies as one complete operation. A failed save must not leave partial records.
+- No DELETE endpoints are provided because the specification preserves submitted inspection and deficiency history.
+- Optional P3 inspection notes are not included in this API contract until the corresponding field is added to the Inspection entity and approved.
 
 ---
 
 ## SVC Self-Check
 
-- [ ] **Simple** — entities are plain nouns from the Spec; paths are nouns, not verbs (`/photos`, not `/getPhotos`).
-- [ ] **Valuable** — every field and endpoint has a requirement ID; anything without one has been cut; sensitive fields are named and protected.
+- [ X ] **Simple** — entities are plain nouns from the Spec; paths are nouns, not verbs (`/photos`, not `/getPhotos`).
+- [ X ] **Valuable** — every field and endpoint has a requirement ID; anything without one has been cut; sensitive fields are named and protected.
 - [ ] **Complete** — the database matches ADR-00; every P1 requirement that stores or reads data has its entity and endpoint; every FK has a delete rule; the ERD renders and shows cardinality; the normalization check is done, with any exception explained; every endpoint says who can call it; the team has approved it.
