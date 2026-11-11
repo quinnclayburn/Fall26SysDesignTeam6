@@ -62,7 +62,8 @@ FieldWorks is a proposed web-based maintenance management system that will allow
 ---
 
 ## SVC Self-Check
-
-- [ ] **Simple** — the approach reads in under a minute; each ADR states one decision.
-- [ ] **Valuable** — every ADR and screen has a requirement ID; every "Why this one" names a real trade-off, not "it was easier."
+- [x] **Simple** — the approach reads in under a minute; each ADR states one decision.
+- [x] **Valuable** — every ADR and screen has a requirement ID; every "Why this one" names a real trade-off, not "it was easier."
 - [ ] **Complete** — ADR-00 names the full stack, starter skill, and database; every P1 requirement is covered by a screen or part; P1 comes first, one scenario end to end at a time; every risk has a mitigation; the team has approved it before Tasks are written.
+
+
