@@ -169,7 +169,7 @@ erDiagram
 - These endpoints are proposed contracts. The current prototype uses Vue and browser localStorage rather than a live HTTP server.
 - "Anyone" means a user of the single-user demonstration prototype. Real authentication and permissions are not implemented; final access rules require team approval under Q2.
 - Readiness is calculated from inspection and deficiency records rather than stored as a separate database field.
-- Deficiencies identify their associated asset through `Deficiency.inspection_id → Inspection.asset_id`.
+- Deficiencies identify their associated asset through `Deficiency.inspection_id → Inspection.id`, then `Inspection.asset_id → Asset.id`.
 - Inspection submission must save the inspection, results, and deficiencies as one complete operation. A failed save must not leave partial records.
 - No DELETE endpoints are provided because the specification preserves submitted inspection and deficiency history.
 - Optional P3 inspection notes are not included in this API contract until the corresponding field is added to the Inspection entity and approved.
@@ -180,4 +180,5 @@ erDiagram
 
 - [x] **Simple**
 - [x] **Valuable**
-- [ ] **Complete**has its entity and endpoint; every FK has a delete rule; the ERD renders and shows cardinality; the normalization check is done, with any exception explained; every endpoint says who can call it; the team has approved it.
+- [ ] **Complete** — the database matches ADR-00; every P1 requirement that stores or reads data has its entity and endpoint; every FK has a delete rule; the ERD renders and shows cardinality; the normalization check is done, with any exception explained; every endpoint says who can call it; the team has approved it.
+
