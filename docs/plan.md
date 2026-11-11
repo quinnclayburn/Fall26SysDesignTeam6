@@ -32,22 +32,33 @@ FieldWorks is a proposed web-based maintenance management system that will allow
 *Every screen a user sees, plus any non-screen part (such as the data layer), in the order you'll build them — anything you leave out, the agent will invent. Carry over what worked in the Week 3 prototype test. P1 first, one scenario end to end before the next: first the one that shows your data (usually browsing), then the riskiest.*
 
 | # | Screen or part | Route | Shows / does | Req IDs | Priority |
-|---|----------------|-------|--------------|---------|----------|
-| 1 | | | | | P1 |
-| 2 | | | | | |
+|---|---|---|---|---|---|
+| 1 | Data layer | N/A | Define Asset, ChecklistItem, Inspection, InspectionResult, and Deficiency models; implement localStorage persistence, validation, and prototype notice. | R1-R18, R28 | P1 |
+| 2 | Asset List | `/assets` | Display registered assets and readiness; show errors when data cannot be loaded. | R4, R13, R17, R23, R27 | P1 |
+| 3 | Asset Registration | `/assets/new` | Register vehicles and equipment; validate required fields, reject duplicate IDs, and retain entries after errors. | R1-R5, R26-R28 | P1 |
+| 4 | Asset Detail | `/assets/{id}` | Display saved asset information, initial readiness, and links to PMCS and Open deficiencies. | R4, R12, R13, R17, R26-R28 | P1 |
+| 5 | PMCS Inspection | `/assets/{id}/inspections/new` | Display applicable checklist; collect Pass, Fail, or N/A results and required deficiency details. | R6-R8, R26-R28 | P1 |
+| 6 | Inspection Submission and Detail | `/inspections/{id}` | Save inspection, results, and deficiencies together; retain drafts on failure and preserve submitted records. | R9-R11, R18 | P1 |
+| 7 | Deficiency Resolution | `/deficiencies/{id}` | Display deficiency details, require resolution notes, and preserve unresolved issues. | R12, R14, R15, R18 | P1 |
+| 8 | Readiness Logic | N/A | Calculate readiness from submitted inspections and all Open deficiencies; prevent false Ready status. | R4, R13, R16-R18, R27 | P1 |
+| 9 | Asset History | `/assets/{id}/history` | Show submitted inspections and resolved deficiencies in newest-first order. | R19-R20 | P2 |
+| 10 | Search and Filters | `/assets` | Search by asset ID or name and filter by readiness; handle no matches and retrieval errors. | R21-R23 | P2 |
+| 11 | Optional Inspection Notes | `/assets/{id}/inspections/new` | Add and validate optional notes once the Inspection schema is approved for this feature. | R24-R25 | P3 |
 
-**Why this order:** *(One or two sentences.)*
-
+**Why this order:** Build the data layer and basic asset display first, then complete registration and asset detail as the first P1 scenario. Next, complete the PMCS-to-deficiency-resolution journey with fail-safe readiness calculations before adding P2 history/search and P3 notes.
 ---
 
 ## 4. Risks & Assumptions
 
-*Anything that might go wrong, and anything you're taking on faith — including accounts, APIs, or tools you depend on but don't control. Rate Likelihood and Impact as Low / Medium / High.*
-
 | Risk or assumption | Likelihood | Impact | Mitigation |
-|--------------------|------------|--------|------------|
-| | | | |
-
+|---|---|---|---|
+| Browser localStorage may be cleared or unavailable, causing loss of prototype data. | Medium | High | Use fictional data, explain storage limitations, validate saves, and maintain test data for recovery. |
+| Inspection submission may save incomplete records or fail partway through. | Medium | High | Validate the entire inspection and save the inspection, results, and deficiencies together; test failure recovery. |
+| Readiness may incorrectly show Ready while a critical deficiency remains Open. | Medium | High | Calculate readiness using all unresolved deficiencies and test critical-failure scenarios. |
+| Authentication and user permissions are not finalized. | Medium | High | Use a single-user prototype without real accounts and confirm future access rules with the team. |
+| Checklist assignment and deficiency-resolution rules may be unclear. | Medium | High | Confirm checklist and resolution rules with the Product Owner before implementation. |
+| GitHub Pages and localStorage cannot provide production database features. | Medium | Medium | Clearly label the prototype and document PostgreSQL as the proposed future database. |
+| Team implementation may take longer than expected. | Medium | Medium | Prioritize P1 features, test each workflow, and defer P2/P3 features if needed. |
 ---
 
 ## SVC Self-Check
