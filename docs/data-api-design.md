@@ -161,7 +161,8 @@ erDiagram
 | R7–R11, R13, R16, R18 | POST | `/assets/{id}/inspections` | Checklist results, N/A reasons, and descriptions/severities for failed items | 201 Created; submitted Inspection, linked Open deficiencies, and updated readiness; saved together | 400 incomplete or invalid answers; 404 asset not found; 500 save failure | Anyone |
 | R11, R12 | GET | `/inspections/{id}` | Inspection UUID in path | 200 OK; saved inspection, checklist results, and linked deficiencies | 404 inspection not found | Anyone |
 | R12, R13, R18 | GET | `/assets/{id}/deficiencies` | Asset UUID in path; optional `status` filter | 200 OK; deficiencies found through the asset's inspections | 400 invalid filter; 404 asset not found; 503 data unavailable | Anyone |
-| R14–R16 | PATCH | `/deficiencies/{id}` | `status: Resolved`, nonblank `resolution_notes` | 200 OK; updated deficiency, generated resolution timestamp, recalculated readiness, and remaining critical blockers | 400 invalid note; 404 deficiency not found; 409 already resolved; 500 save failure | Anyone |
+| R12, R14-R15 | GET | `/deficiencies/{id}` | Deficiency UUID in path | 200 OK; deficiency details including description, severity, status, resolution notes, and resolved timestamp | 404 deficiency not found; 503 data unavailable | Anyone |
+| R14-R16 | PATCH | `/deficiencies/{id}` | `status: Resolved`, nonblank `resolution_notes` | 200 OK; updated deficiency, generated resolution timestamp, recalculated readiness, and remaining critical blockers | 400 invalid note; 404 deficiency not found; 409 already resolved; 500 save failure | Anyone |
 | R19, R20 | GET | `/assets/{id}/history` | Asset UUID in path | 200 OK; submitted inspections and resolved deficiency events, newest first | 404 asset not found; 503 history unavailable | Anyone |
 
 **API design notes**
