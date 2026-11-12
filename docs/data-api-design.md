@@ -170,7 +170,7 @@ erDiagram
 - "Anyone" means a user of the single-user demonstration prototype. Real authentication and permissions are not implemented; final access rules require team approval under Q2.
 - Readiness is calculated from inspection and deficiency records rather than stored as a separate database field.
 - Deficiencies identify their associated asset through `Deficiency.inspection_id → Inspection.id`, then `Inspection.asset_id → Asset.id`.
-- Inspection submission must save the inspection, results, and deficiencies as one complete operation. A failed save must not leave partial records.
+- Inspection submission must validate the inspection, checklist results, and deficiencies together before saving them as one updated dataset in localStorage. The draft must remain available until saving succeeds. Retries must reuse a stable submission ID to prevent duplicate inspections or deficiencies. Test a forced save failure followed by a successful retry.
 - No DELETE endpoints are provided because the specification preserves submitted inspection and deficiency history.
 - Optional P3 inspection notes are not included in this API contract until the corresponding field is added to the Inspection entity and approved.
 
