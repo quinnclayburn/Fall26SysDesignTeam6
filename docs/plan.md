@@ -53,7 +53,7 @@ FieldWorks is a proposed web-based maintenance management system that will allow
 | Risk or assumption | Likelihood | Impact | Mitigation |
 |---|---|---|---|
 | Browser localStorage may be cleared or unavailable, causing loss of prototype data. | Medium | High | Use fictional data, explain storage limitations, validate saves, and maintain test data for recovery. |
-| Inspection submission may save incomplete records or fail partway through. | Medium | High | Validate the entire inspection and save the inspection, results, and deficiencies together; test failure recovery. |
+| Inspection submission may save incomplete records or fail partway through. | Medium | High | Validate the inspection, results, and deficiencies together; save one updated localStorage dataset; retain the draft until saving succeeds; reuse a stable submission ID to prevent duplicates; and test a forced save failure followed by a retry. |
 | Readiness may incorrectly show Ready while a critical deficiency remains Open. | Medium | High | Calculate readiness using all unresolved deficiencies and test critical-failure scenarios. |
 | Authentication and user permissions are not finalized. | Medium | High | Use a single-user prototype without real accounts and confirm future access rules with the team. |
 | Checklist assignment and deficiency-resolution rules may be unclear. | Medium | High | Confirm checklist and resolution rules with the Product Owner before implementation. |
