@@ -39,7 +39,7 @@ FieldWorks is a proposed web-based maintenance management system that will allow
 | 4 | Asset Detail | `/assets/{id}` | Display saved asset information, initial readiness, and links to PMCS and Open deficiencies. | R4, R12, R13, R17, R26-R28 | P1 |
 | 5 | PMCS Inspection | `/assets/{id}/inspections/new` | Display applicable checklist; collect Pass, Fail, or N/A results and required deficiency details. | R6-R8, R26-R28 | P1 |
 | 6 | Inspection Submission and Detail | `/inspections/{id}` | Save inspection, results, and deficiencies together; retain drafts on failure and preserve submitted records. | R9-R11, R18 | P1 |
-| 7 | Deficiency Resolution | `/deficiencies/{id}` | Display deficiency details, require resolution notes, and preserve unresolved issues. | R12, R14, R15, R18 | P1 |
+| 7 | Deficiency Resolution | `/deficiencies/{id}` | Load the selected deficiency; display its details and require resolution notes. On successful save, show the resolved deficiency ID, updated readiness, and any remaining critical issues. On save failure, retain the note, keep the deficiency Open, and display an error. | R12, R14-R16, R18 | P1 |
 | 8 | Readiness Logic | N/A | Calculate readiness from submitted inspections and all Open deficiencies; prevent false Ready status. | R4, R13, R16-R18, R27 | P1 |
 | 9 | Asset History | `/assets/{id}/history` | Show submitted inspections and resolved deficiencies in newest-first order. | R19-R20 | P2 |
 | 10 | Search and Filters | `/assets` | Search by asset ID or name and filter by readiness; handle no matches and retrieval errors. | R21-R23 | P2 |
