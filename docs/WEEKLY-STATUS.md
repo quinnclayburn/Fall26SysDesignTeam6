@@ -10,6 +10,29 @@ This is the one file the instructor checks each week. Each entry should be brief
 
 ---
 
+## Week 4 — November 12, 2026
+
+- **Done:**
+ - William Byers (Product Owner):  Reviewed the Week 4 design updates and clarified the remaining product rules related to readiness, deficiency resolution, and checklist requirements.
+- Quinn Clayburn (Delivery Lead): Reviewed the updated architecture documents and coordinated the Week 4 status update.
+- Mustafa Almajmaie (Architecture Lead): Updated the Data & API Design and Plan documents to reflect the normalized schema, ERD adjustments, API endpoints, and build-order revisions. This included removing the redundant asset_id from the Deficiency entity and confirming 1NF/2NF/3NF compliance.
+- **Next:**
+  - **William:** Resolve the remaining product decisions on persistence/retry behavior, authentication and identity, and readiness/deficiency rules before final approval.
+  - **Quinn:**  Finalize the remaining approvals and prepare for Week 5 task planning
+  - **Mustafa:** Complete the final architecture revisions and confirm the design remains consistent with the specification
+ 
+- **Blockers:** No blocker to continuing design work, but final approval remains pending for Q1–Q4 and the remaining prototype assumptions.
+
+- **Open questions:** Q1–Q4 remain open: persistence and retry behavior; authentication and identity; readiness and deficiency rules; and PMCS checklist and asset requirements.
+
+- **AI use:**  Mustafa used ChatGPT to review the normalization logic and ERD updates before validating them against the specification. Quinn used built-in VS Code Copilot to check the weekly status against the template and prior entries.
+
+- **Change request:**  Updated the Data & API and Plan documents to reflect the revised normalization and design logic; no broader functional scope change is recorded.
+
+- **Instructor response:** Pending Review
+
+---
+
 ## Week 3 — November 05, 2026
 
 - **Done:**
