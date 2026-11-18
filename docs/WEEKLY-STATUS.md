@@ -29,7 +29,7 @@ This is the one file the instructor checks each week. Each entry should be brief
 
 - **Change request:**  Updated the Data & API and Plan documents to reflect the revised normalization and design logic; no broader functional scope change is recorded.
 
-- **Instructor response:** Pending Review
+- **Instructor response:** *jLyst: Approved*
 
 ---
 
