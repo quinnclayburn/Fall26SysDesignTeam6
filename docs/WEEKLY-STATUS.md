@@ -10,6 +10,30 @@ This is the one file the instructor checks each week. Each entry should be brief
 
 ---
 
+## Week 5 — November 19, 2026
+
+## Week 5 — November 19, 2026
+
+- **Done:** Quinn Clayburn (Delivery Lead): Drafted and organized the final task list in `docs/tasks.md`, including P1/P2/P3 priorities, dependencies, Done when checks, statuses, and the changelog. 
+- William Byers (Product Owner): Reviewed the P1 journey and remaining product decisions for task readiness. 
+- Mustafa Almajmaie (Architecture Lead): Provided technical revisions for task sequencing, localStorage persistence, retrieval errors, readiness, prototype disclosure, and P2/P3 ordering. The team completed the P1 cross-check against the Specification, Data & API Design, and Plan.
+- **Next:** 
+- William: Confirm remaining product decisions for Q1–Q4 and provide approval. 
+- Quinn: Obtain team approval, update task statuses after decisions are resolved, and prepare for the Week 6 validation build. 
+- Mustafa: Finalize the technical interpretation of resolved questions and update the affected architecture documents before implementation. The team: Re-run and verify the P1 cross-check after document changes.
+
+- **Blockers:** P1 approval remains blocked by unresolved open questions Q1–Q7 and pending team approval.
+
+- **Open questions:** Q1–Q4 cover persistence and retries, authentication and identity, readiness and deficiency rules, and PMCS checklists and asset requirements. Q5–Q7 cover participant research and prototype testing, correction workflows, and final P1 approval.
+
+- **AI use:** Built-in VS Code Copilot compared the task draft with `docs/tasks.md` and helped organize the task list, cross-check, template sections, and changelog. The team reviewed and owns every task, trace, and status.
+
+- **Change request:** None.
+
+- **Instructor response:** ___
+
+---
+
 ## Week 4 — November 12, 2026
 
 - **Done:**
