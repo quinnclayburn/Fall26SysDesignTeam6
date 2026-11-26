@@ -10,7 +10,22 @@ This is the one file the instructor checks each week. Each entry should be brief
 
 ---
 
-## Week 5 — November 19, 2026
+
+
+## Week 6 — November 26, 2026
+
+- **Done:**
+  - Quinn Clayburn (Delivery Lead): Coordinated the Part A validation build through T17 in the ignored `validation/` folder. Reviewed agent reports and manually checked T16 resolution behavior and T17 keyboard, readiness, validation, and retrieval-error behavior. Added 11 documented gaps to Section 3 of `docs/tasks.md`; task statuses remain unchanged.
+- **Next:**
+  - Quinn and team: Review the 11 gap entries and assign document owners to resolve decisions and update/approve source documents before the Week 7 rerun.
+  - Team: After source documents are updated and approved, start a fresh agent session, clear `validation/`, rerun the P1 tasks from T0, and mark each gap's “Fixed in re-run?” field Yes or No.
+- **Blockers:** Q1–Q7 remain unresolved or pending team approval, so final P1 acceptance remains blocked. The Part A choices for Q1 and Q3 are temporary validation approaches, not approvals.
+- **Open questions:** Q1–Q7 remain unresolved or pending confirmation, covering persistence/retry, authentication/identity, readiness/deficiency rules, checklist and asset requirements, user research, correction workflows, and final P1 approval.
+- **AI use:** The VS Code Copilot agent supported the Part A validation build. Copilot assistance helped review agent reports and guide browser checks; Quinn reviewed the results. Task statuses were not changed.
+- **Change request:** No scope change. Consolidated 11 staged gap entries into Section 3 of `docs/tasks.md` and removed the separate staging file. No task statuses were changed.
+- **Instructor response:** ___
+
+---
 
 ## Week 5 — November 19, 2026
 
